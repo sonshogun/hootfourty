@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA6rIyzqidBoTIE2w23UShKvqWyhnaVR8&libraries=places"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan's 40th Birthday <span id="blink">Hoot40</span> Extravaganza</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #62FF00; /* Neon green text color */
+            background-image: url("bubblebg.jpg");
+        }
+        
+        header {
+            background-color: black;
+            color: #9D00FF; /* Neon green text color */
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        
+        #blink {
+            font-size: 64px; /* Larger font size for Hoot40 */
+            font-family: 'Courier New', monospace; /* Different font for Hoot40 */
+            animation: blinker 1s linear infinite;
+        }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        
+        .event-details {
+            background-color: black;
+            padding: 20px;
+            border: 2px solid #00ff00; /* Neon green border */
+        }
+        
+        .event-details h2 {
+            font-size: 30px;
+        }
+        
+        .event-details p {
+            font-size: 20px;
+        }
+        
+        .site-directory {
+            float: left;
+            width: 20%;
+            background-color: #333;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .site-directory button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: black;
+            color: #00ff00; /* Neon green text color */
+            border: none;
+            cursor: pointer;
+        }
+        
+        .site-content {
+            float: right;
+            width: 70%;
+            padding: 20px;
+        }
+
+        .carousel-container {
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-content {
+            display: flex;
+            animation: carousel 30s linear infinite;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .construction-gif {
+            margin-right: 420x; /* lol */
+        }
+
+        .be-there {
+            margin: 0 0 1.5em; background-color: #00008B; display: inline-block;
+        }
+
+        @keyframes carousel {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-1100%); /* Adjust for the number of images */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to</h1>
+        <h1>Brendan's 40th Birthday <span id="blink">Hoot40</span> Extravaganza</h1>
+
+        <div class="tab-content marquee-content" id="marquee">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                <div class="gif-container">
+                    <img src="underconstruction.gif" alt="Under Construction" width="200" height="100" class="construction-gif">
+                    <img src="underconstruction.gif" alt="Under Construction" width="200" height="100" class="construction-gif">
+                </div>
+                <p>This website is still under construction, just like our party preparations!</p>
+                <div class="gif-container">
+                    <img src="underconstruction.gif" alt="Under Construction" width="200" height="100" class="construction-gif">
+                    <img src="underconstruction.gif" alt="Under Construction" width="200" height="100" class="construction-gif">
+                </div>
+            </marquee>
+        </div>
+
+    </header>
+
+    <div class="site-directory">
+        <button onclick="showTab('main')">Details</button>
+        <button onclick="showTab('details')">Details</button>
+        <button onclick="showTab('directions')">Directions</button>
+        <button onclick="showTab('food')">Food</button>
+        <button onclick="showTab('games')">Games</button>
+        <button onclick="showTab('schedule')">Schedule</button>
+        <button onclick="startMarquee()">Start Marquee</button>
+        <button onclick="stopMarquee()">Stop Marquee</button>
+    </div>
+    
+    <div class="site-content">
+
+        <div class="tab-content" id="main">
+            <img src="introPic.jpg" alt="A fourtieth birthday invitation" />
+            <p class="be-there">October 7th, 2023 - 7:00 PM - 2 Continental Avenue, Morristown, NJ</p>
+        </div>
+
+        <div class="tab-content" id="details" style="display:none;">
+            <div class="event-details">
+                <h2>Event Details</h2>
+                <p>Date: October 7, 2023</p>
+                <p>Time: 7:00 PM onwards</p>
+                <p>Location: 2 Continental Avenue, Morristown, NJ</p>
+                <p>Dress Code: 90s Retro</p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="directions" style="display:none;">
+            <h2>Directions</h2>
+            <p>Get directions to the 90s Nostalgia Hall by following the neon green signs and the sound of 90s music!</p>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="tab-content" id="food" style="display:none;">
+            <h2>Food</h2>
+            <p>Enjoy a blast from the past with a buffet of 90s-inspired snacks and treats!</p>
+        </div>
+        
+        <div class="tab-content" id="games" style="display:none;"">
+            <h2>Games</h2>
+            <p>Join in on the 90s gaming fun with Mortal Kombat Scrub Tournament, 8 Player Quake 2, and more!</p>
+        </div>
+        
+        <div class="tab-content" id="schedule" style="display:none;">
+            <h2>Schedule</h2>
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Date & Time</th>
+                </tr>
+                <tr>
+                    <td>Mortal Kombat Scrub Tournament</td>
+                    <td>7:30 PM</td>
+                </tr>
+                <tr>
+                    <td>8 Player Quake 2</td>
+                    <td>8:00 PM</td>
+                </tr>
+                <!-- Add more events as needed -->
+            </table>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-content">
+                <!-- Add your image elements here -->
+                <div class="carousel-item"><img src="1.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="2.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="3.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="4.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="5.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="6.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="7.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="8.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="9.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="10.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="11.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="12.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="13.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="14.jpg" alt="Image 2"></div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.style.display = 'none';
+            });
+            document.querySelector(`#${tabId}`).style.display = 'block';
+        }
+
+        function startMarquee() {
+            const marquee = document.querySelector('#marquee');
+            marquee.style.display = 'block';
+        }
+
+        function stopMarquee() {
+            const marquee = document.querySelector('#marquee');
+            marquee.style.display = 'none';
+        }
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.783537, lng: -74.4686771 }, 
+                zoom: 18 // Adjust the zoom level as needed
+            });
+
+            var marker = new google.maps.Marker({
+                position:map.center,
+                animation:google.maps.Animation.BOUNCE,
+                icon:"mario.png"
+            });
+
+            marker.setMap(map); 
+        }
+        // Call the initMap function when the API is loaded
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+</body>
+</html>
