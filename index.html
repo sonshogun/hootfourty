@@ -121,6 +121,21 @@
             margin-right: 420x; /* lol */
         }
 
+        .highlight {
+            background-color: #00008B;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width:150px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+            gap: 10px; /* Adjust the gap between items as needed */
+        }
+
         .be-there {
             margin: 0 0 1.5em; background-color: #00008B; display: inline-block;
         }
@@ -171,16 +186,18 @@
 
         <div class="tab-content" id="main">
             <img src="introPic.jpg" alt="A fourtieth birthday invitation" />
-            <p class="be-there">October 7th, 2023 - 7:00 PM - 2 Continental Avenue, Morristown, NJ</p>
+            <p class="be-there">October 7th, 2023 - 2:00PM to all hours of the night - 2 Continental Avenue, Morristown, NJ</p>
         </div>
 
         <div class="tab-content" id="details" style="display:none;">
             <div class="event-details">
                 <h2>Event Details</h2>
                 <p>Date: October 7, 2023</p>
-                <p>Time: 7:00 PM onwards</p>
+                <p>Time: 2:00 PM to all hours of the night</p>
                 <p>Location: 2 Continental Avenue, Morristown, NJ</p>
                 <p>Dress Code: Video Game Smart Casual</p>
+                <p>Accommodations: For folks coming from further away or folks that just don't want to drive we have multiple bedrooms, futons, and couches available to crash</p>
+                <p>Pets: We have two domestic short hairs Ash and Morgan, as well an air filter and ample allergy medication for those who partake.</p>
             </div>
         </div>
         
@@ -193,15 +210,48 @@
         </div>
         
         <div class="tab-content" id="food" style="display:none;">
-            <h2>Food</h2>
-            <h3>Lunch</h3>
-            <p>Classic Costco Treats"
+            <h1>Food</h1>
+            <h2>Lunch</h2>
+            <p>For lunch we are having a delightful mix of different tacos from <a href="https://www.folkloretaco.com/menus/">Folklore Mexican</a></p>
+            <p>We will have veggie options and I'll grab some gluten-free tortillas</p>
+            <h2>Dinner</h2>
+            <p>For dinner we will be getting Pizzas from <a href="https://www.coniglios.com/">Coniglios</a> in Morristown </p>
+            <p>I'll also try to have some other good options to accompany these for meals.
+            <h2>Other foods</h2>
+            <p>We will be making a classic Costco run before the Hootenanny so will have a lot of classic snacks, veggies, and otherwise</p>
+            <p>Folks are also welcome to bring their own dishes, and they will be most appreciated</p>
+            <h2>Drinks</h2>
+            <p>We'll have plenty of seltzer, soda, and energy drinks in the downstairs beverage fridge.</p>
+            <p>We will also have some beer consulting with traditional Fay sommelier but otherwise feel free to BYOB.</p>
         </div>
         
         <div class="tab-content" id="games" style="display:none;"">
-            <h2>Games</h2>
-            <p>SNES</p>
-            <p>The MiSTer</p>
+            <h1>Games</h1>
+            <h2>Systems</h2>
+            <div class="grid-container">
+                <div class="highlight">SNES</div>
+                <div class="highlight">PlayStation</div>
+                <div class="highlight">Nintendo 64</div>
+                <div class="highlight">PlayStation 2</div>
+                <div class="highlight">GameCube</div>
+                <div class="highlight">Dreamcast</div>
+                <div class="highlight">Xbox 360</div>
+                <div class="highlight">PlayStation 3</div>
+                <div class="highlight">Wii</div>
+                <div class="highlight">WiiU</div>
+                <div class="highlight">PlayStation 4</div>
+                <div class="highlight">Nintendo Switch</div>
+                <div class="highlight">Xbox Series S</div>
+                <div class="highlight">Xbox Series X</div>
+                <div class="highlight">PlayStation 5</div>
+            </div>
+            <h2>The Library</h2>
+            <p>I've been on a journey to catalog all my games, so if you are excited to try something you used to play you can see if I have it <a href="https://www.libib.com/u/mrpt/l/829055">here</a></p>
+            <p>Feel free to bring your own old stuff if you like as well and I'm sure we can hook it up!</p>
+            <h2>The MiSTer</h2>
+            <p>The <a href="https://github.com/MiSTer-devel/Wiki_MiSTer/wiki">MiSTer project</a> is a cool open sourced attempt to use FPGA hardware to emulate old consoles and computers.</p>
+            <p>My rig for it can play games and is loaded with ROMs for the NES, SNES, Genesis, Playstation, Sega Master System, and much more!</p>
+            <h2>MegaHAL</h2>
             <p>Other things</p>
         </div>
         
@@ -226,7 +276,6 @@
 
         <div class="carousel-container">
             <div class="carousel-content">
-                <!-- Add your image elements here -->
                 <div class="carousel-item"><img src="1.jpg" alt="Image 1"></div>
                 <div class="carousel-item"><img src="2.jpg" alt="Image 2"></div>
                 <div class="carousel-item"><img src="3.jpg" alt="Image 1"></div>
@@ -240,8 +289,6 @@
                 <div class="carousel-item"><img src="11.jpg" alt="Image 1"></div>
                 <div class="carousel-item"><img src="12.jpg" alt="Image 2"></div>
                 <div class="carousel-item"><img src="13.jpg" alt="Image 1"></div>
-                <div class="carousel-item"><img src="14.jpg" alt="Image 2"></div>
-                <!-- Add more images as needed -->
             </div>
         </div>
     </div>
