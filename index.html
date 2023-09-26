@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brendan's 40th Birthday <span id="blink">Hoot40</span> Extravaganza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     <style>
+        
         body {
             background-color: black;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Neue', cursive;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -27,6 +31,15 @@
             text-transform: uppercase;
             letter-spacing: 4px;
             margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+
+        }
+
+        h3 {
+            font-size: 1.8rem;
         }
         
         #blink {
@@ -145,7 +158,7 @@
 
         .carousel-content {
             display: flex;
-            animation: carousel 30s linear infinite;
+            animation: carousel 100s linear infinite;
         }
 
         .carousel-item {
@@ -182,11 +195,15 @@
         }
 
         .be-there {
-            margin: 0 0 1.5em; background-color: #00008B; display: inline-block;
+            margin: 0 0 1.5em; background-color: #00008B; 
         }
 
         .eat-there {
             margin: 0 0 1.5em; background-color: #00008B;
+        }
+
+        .eat-there a, .eat-there a:visited {
+            color: #fff
         }
 
         .games {
@@ -209,7 +226,7 @@
             text-decoration: none;
             border-radius: 8px;
             border: 2px solid #00008B;
-            background-color: #00ff00; 
+            background-color: #188818; 
             color: #fff; 
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -237,7 +254,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to</h1>
+        <h1>Welcome to<br>
         <h1>Brendan's 40th Birthday <span id="blink">Hoot40</span> Extravaganza</h1>
 
         <div class="tab-content marquee-content" id="marquee">
@@ -255,7 +272,7 @@
         </div>
 
     </header>
-
+<nav>
     <div class="site-directory">
         <button onclick="showTab('main')">Main</button>
         <button onclick="showTab('details')">Details</button>
@@ -263,10 +280,12 @@
         <button onclick="showTab('food')">Food</button>
         <button onclick="showTab('games')">Games</button>
         <button onclick="showTab('schedule')">Schedule</button>
+        <button onclick="location.href='https://forms.gle/GHtvYmxNBBK2uXhb6'">RSVP</button>
         <button onclick="startMarquee()">Construction In Progress</button>
         <button onclick="stopMarquee()">Construction Cancelled</button>
     </div>
-    
+</nav>
+
     <div class="site-content">
 
         <div class="tab-content" id="main">
@@ -277,12 +296,14 @@
         <div class="tab-content" id="details" style="display:none;">
             <div class="event-details">
                 <h2>Event Details</h2>
-                <p>Date: October 7, 2023</p>
-                <p>Time: 2:00 PM to all hours of the night</p>
-                <p>Location: 2 Continental Avenue, Morristown, NJ</p>
-                <p>Dress Code: Video Game Smart Casual</p>
-                <p>Accommodations: For folks coming from further away or folks that just don't want to drive we have multiple bedrooms, futons, and couches available to crash</p>
-                <p>Pets: We have two domestic short hairs Ash and Morgan, as well an air filter and ample allergy medication for those who partake.</p>
+                <p><strong>Date:</strong> October 7, 2023</p>
+                <p><strong>Time:</strong> 2:00 PM to all hours of the night</p>
+                <p><strong>Location:</strong> 2 Continental Avenue, Morristown, NJ</p>
+                <p><strong>Dress Code:</strong> Video Game Smart Casual</p>
+                <p><strong>Accommodations:</strong> For folks coming from further away or folks that just don't want to drive we have multiple bedrooms, futons, and couches available to crash</p>
+                <p><strong>Pets:</strong> We have two domestic short hairs Ash and Morgan, as well an air filter and ample allergy medication for those who partake.</p>
+                <button class="link-out" onclick="location.href='https://forms.gle/GHtvYmxNBBK2uXhb6'" type="button">
+                    RSVP</button> 
             </div>
         </div>
         
@@ -297,24 +318,24 @@
         </div>
         
         <div class="tab-content" id="food" style="display:none;">
-            <h1 class="eat-there">Food</h1>
-            <h2 class="eat-there">Lunch</h2>
+            <h2 class="eat-there">Food</h2>
+            <h3 class="eat-there">Lunch</h3>
             <p class="eat-there">For lunch we are having a delightful mix of different tacos from <a href="https://www.folkloretaco.com/menus/">Folklore Mexican</a></p>
             <p class="eat-there">We will have veggie options and I'll grab some gluten-free tortillas</p>
-            <h2 class="eat-there">Dinner</h2>
+            <h3 class="eat-there">Dinner</h3>
             <p class="eat-there">For dinner we will be getting Pizzas from <a href="https://www.coniglios.com/">Coniglios</a> in Morristown </p>
             <p class="eat-there">I'll also try to have some other good options to accompany these for meals.
-            <h2 class="eat-there">Other foods</h2>
+            <h3 class="eat-there">Other foods</h3>
             <p class="eat-there">We will be making a classic Costco run before the Hootenanny so will have a lot of classic snacks, veggies, and otherwise</p>
             <p class="eat-there">Folks are also welcome to bring their own dishes, and they will be most appreciated</p>
-            <h2 class="eat-there">Drinks</h2>
+            <h3 class="eat-there">Drinks</h3>
             <p class="eat-there">We'll have plenty of seltzer, soda, and energy drinks in the downstairs beverage fridge.</p>
             <p class="eat-there">We will also have some beer consulting with traditional Fay sommelier but otherwise feel free to BYOB.</p>
         </div>
         
         <div class="tab-content" id="games" style="display:none;"">
-            <h1 class="games">Games</h1>
-            <h2 class="games">Systems</h2>
+            <h2 class="games">Games</h2>
+            <h3 class="games">Systems</h3>
             <div class="grid-container">
                 <div class="highlight">SNES</div>
                 <div class="highlight">PlayStation</div>
@@ -332,17 +353,17 @@
                 <div class="highlight">Xbox Series X</div>
                 <div class="highlight">PlayStation 5</div>
             </div>
-            <h2 class="games">The Library</h2>
+            <h3 class="games">The Library</h3>
             <p class="games">I've been on a journey to catalog all my games, so if you are excited to try something you used to play you can see if I have it below.</p> 
             <button class="link-out" onclick="location.href='https://www.libib.com/u/mrpt/l/829055'" type="button">
                     Visit Library</button> 
             <p class="games">Feel free to bring your own old stuff if you like as well and I'm sure we can hook it up!</p>
-            <h2 class="games">The MiSTer</h2>
+            <h3 class="games">The MiSTer</h3>
             <p class="games">The <a href="https://github.com/MiSTer-devel/Wiki_MiSTer/wiki">MiSTer project</a> is a cool open sourced attempt to use FPGA hardware to emulate old consoles and computers.</p>
             <p class="games">My rig for it can play games and is loaded with ROMs for the NES, SNES, Genesis, Playstation, Sega Master System, and much more!</p>
-            <h2 class="games">MegaHAL</h2>
+            <h3 class="games">MegaHAL</h3>
             <p class="games">Thanks to interested parties I have in my possession the brain of an AI which hasn't been turned on since the early 00's - let's see what it has to say!</p>
-            <h2 class="games">Other stuff</h2>
+            <h3 class="games">Other stuff</h3>
             <p class="games">A key part of a Fay Hootenanny is doing whatever you feel like it - please come and enjoy even if you aren't super excited about games. We will have board games, food and conversation, rooms to chill with cats in, whatever your Saturday feelings it would be great to see you!</p>
         </div>
         
