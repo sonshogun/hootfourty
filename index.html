@@ -190,8 +190,18 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-            gap: 10px; /* Adjust the gap between items as needed */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px; 
+        }
+
+        .purty-pictures {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .purty-pictures img{
+            max-width: 100%;
         }
 
         .be-there {
@@ -247,7 +257,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-1100%); /* Adjust for the number of images */
+                transform: translateX(-2250%); /* Adjust for the number of images */
             }
         }
     </style>
@@ -280,6 +290,7 @@
         <button onclick="showTab('food')">Food</button>
         <button onclick="showTab('games')">Games</button>
         <button onclick="showTab('schedule')">Schedule</button>
+        <button onclick="showTab('gallery')">Gallery</button>
         <button onclick="location.href='https://forms.gle/GHtvYmxNBBK2uXhb6'">RSVP</button>
         <button onclick="startMarquee()">Construction In Progress</button>
         <button onclick="stopMarquee()">Construction Cancelled</button>
@@ -421,6 +432,33 @@
             </table>
         </div>
 
+        <div class="tab-content" id="gallery" style="display:none;">
+            <div class="purty-pictures">
+                <img src="1.jpg" alt="Image 1">
+                <img src="2.jpg" alt="Image 2">
+                <img src="3.jpg" alt="Image 1">
+                <img src="4.jpg" alt="Image 2">
+                <img src="5.jpg" alt="Image 1">
+                <img src="6.jpg" alt="Image 2">
+                <img src="7.jpg" alt="Image 1">
+                <img src="8.jpg" alt="Image 2">
+                <img src="9.jpg" alt="Image 1">
+                <img src="10.jpg" alt="Image 2">
+                <img src="11.jpg" alt="Image 1">
+                <img src="12.jpg" alt="Image 2">
+                <img src="13.jpg" alt="Image 1">
+                <img src="14.jpg" alt="Image 1">
+                <img src="15.jpg" alt="Image 2">
+                <img src="16.jpg" alt="Image 1">
+                <img src="17.jpg" alt="Image 2">
+                <img src="18.jpg" alt="Image 1">
+                <img src="19.jpg" alt="Image 2">
+                <img src="20.jpg" alt="Image 1">
+                <img src="21.jpg" alt="Image 2">
+                <img src="22.jpg" alt="Image 1">
+            </div>
+        </div>
+
         <div class="carousel-container">
             <div class="carousel-content">
                 <div class="carousel-item"><img src="1.jpg" alt="Image 1"></div>
@@ -436,9 +474,20 @@
                 <div class="carousel-item"><img src="11.jpg" alt="Image 1"></div>
                 <div class="carousel-item"><img src="12.jpg" alt="Image 2"></div>
                 <div class="carousel-item"><img src="13.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="14.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="15.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="16.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="17.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="18.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="19.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="20.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="21.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="22.jpg" alt="Image 1"></div>
             </div>
         </div>
     </div>
+
+
     
     <script>
         function showTab(tabId) {
